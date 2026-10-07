@@ -1,0 +1,13 @@
+# dsh-cliproxyapi-status bundle patch: one row mounts BOTH halves — the Host
+# half registers the loopback-guarded /api/cliproxyapi/status route, and the
+# client module system serves lib/client.js into the boot graph as the
+# CLIProxyAPI settings section plus a sidebar-foot indicator for the credit
+# packages that are about to expire.
+- insert:
+    - id: cliproxyapi-status
+      name: 'dsh-cliproxyapi-status'
+      config:
+        # Explicit for discoverability; both are the built-in defaults, so
+        # deleting this block changes nothing.
+        baseUrl: 'http://127.0.0.1:8317'
+        keysPath: '/Users/lingsmbp/Library/Application Support/CLIProxyAPI/keys.env'
